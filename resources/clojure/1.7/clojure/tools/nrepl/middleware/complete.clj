@@ -24,7 +24,6 @@
 
 (defn complete
   [{:keys [symbol ns context] :as msg}]
-  (println context)
   (let [ns (when ns (clojure.core/symbol ns))
         prefix (str symbol)
         ctx (cache-context context)]
