@@ -1,6 +1,14 @@
 (ns runuo.main
-  (:gen-class))
+  (:gen-class)
+  (:require [clojure.tools.nrepl.ack :as ack]
+            [clojure.tools.nrepl.server :as server]))
+
+(defonce ack-server
+  (delay (server/start-server :handler (ack/handle-ack server/unknown-op))))
 
 (defn -main
   [& args]
-  (println "Hello, world!"))
+  (ack/reset-ack-port!)
+  (let [server (server/start-server
+                :ack-port (:port @ack-server))]
+    (println "server started: " server)))
