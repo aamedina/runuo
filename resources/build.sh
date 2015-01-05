@@ -1,2 +1,2 @@
 #!/bin/sh
-dmcs -optimize+ -unsafe -t:exe -out:RunUO.exe -win32icon:Server/runuo.ico -nowarn:219,414 -d:MONO -recurse:Server/*.cs
+dmcs -optimize+ -unsafe -t:library -out:Scripts/Output/RunUO.dll -nowarn:219,414 -d:MONO -recurse:Server/*.cs

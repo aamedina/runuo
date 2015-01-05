@@ -1,3 +1,4 @@
+(assembly-load "RunUO")
 (ns runuo.main
   (:gen-class)
   (:require [clojure.tools.nrepl.ack :as ack]
@@ -11,4 +12,5 @@
   (ack/reset-ack-port!)
   (let [server (server/start-server
                 :ack-port (:port @ack-server))]
-    (println "nrepl server started on port: " (:port server))))
+    (println "nrepl server started on port: " (:port server))
+    (Server.Core/Main (into-array String []))))

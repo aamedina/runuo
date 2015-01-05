@@ -480,9 +480,6 @@ namespace Server
 			m_Process = Process.GetCurrentProcess();
 			m_Assembly = Assembly.GetEntryAssembly();
 
-			if( m_Thread != null )
-				m_Thread.Name = "Core Thread";
-
 			if( BaseDirectory.Length > 0 )
 				Directory.SetCurrentDirectory( BaseDirectory );
 
