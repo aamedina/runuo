@@ -11,4 +11,4 @@
   (ack/reset-ack-port!)
   (let [server (server/start-server
                 :ack-port (:port @ack-server))]
-    (println "server started: " server)))
+    (println "nrepl server started on port: " (:port server))))
