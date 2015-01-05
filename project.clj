@@ -15,5 +15,6 @@
          :nuget-ver ["mono" [*PATH "nuget.exe"] "install" %1 "-Version" %2]
          :nuget-any ["mono" [*PATH "nuget.exe"] "install" %1]}
         :main-cmd      [:clj-exe "Clojure.Main.exe"]
-        :compile-cmd   [:clj-exe "Clojure.Compile.exe"]}
+        :compile-cmd   [:clj-exe "Clojure.Compile.exe"]
+        :assembly-paths ["Scripts/Output"]}
   :main runuo.main)
