@@ -29,7 +29,7 @@
   Transport
   ;; TODO this keywordization/stringification has no business being in FnTransport
   (send [this msg]
-    (debug/prn-thread "FnTransport:: send " msg)
+    #_(debug/prn-thread "FnTransport:: send " msg)
     (-> msg clojure.walk/stringify-keys send-fn)
     this)
   (recv [this] #_(debug/prn-thread "FnTransprot:: recv ") (.recv this Int32/MaxValue))                                      ;DM: Long/MAX_VALUE
