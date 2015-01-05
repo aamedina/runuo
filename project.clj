@@ -16,5 +16,6 @@
          :nuget-any ["mono" [*PATH "nuget.exe"] "install" %1]}
         :main-cmd      [:clj-exe "Clojure.Main.exe"]
         :compile-cmd   [:clj-exe "Clojure.Compile.exe"]
-        :assembly-paths ["Scripts/Output"]}
+        :assembly-paths ["resources/clojure/1.7"
+                         "resources/clojure/1.7/Scripts/Output"]}
   :main runuo.main)

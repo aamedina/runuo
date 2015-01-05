@@ -13,4 +13,5 @@
   (let [server (server/start-server
                 :ack-port (:port @ack-server))]
     (println "nrepl server started on port: " (:port server))
-    (Server.Core/Main (into-array String []))))
+    ;; (Server.Core/Main (into-array String []))
+    ))
